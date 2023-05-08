@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@500&family=Red+Hat+Text:wght@600&display=swap');
+
 .body-home {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -10,16 +14,40 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-a.dark {
-    color: #112d4e;
+a {
+    text-decoration: none;
 }
 
-a.light {
-    color: #4589D6;
+a.about {
+    color: #736dea;
 }
- 
-a.menu:hover {
-    background-color: #DB162F;
+
+a.about:visited {
+    color: #6d88ea;
+}
+
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #F8F3F2;
+}
+
+.hover-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #F8F3F2;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 ol {
@@ -34,8 +62,10 @@ li.ordered:before {
 }
 
 .header-home {
-    margin: 30px;
-    margin-top: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
     border-radius: 10px;
     background: #303030;
     text-align: center;
@@ -45,14 +75,29 @@ li.ordered:before {
 }
 
 .header-about {
+    font-family: 'Staatliches';
     margin: 0;
     background: #292929;
     text-align: left;
     font-size: 40px;
-    padding-top: 20px;
+    padding-top: 100px;
     padding-left: 400px;
     padding-bottom: 30px;
     color: #f8f3f2;
+}
+
+h1 {
+    font-family: 'Red Hat Text';
+}
+
+h2 {
+    font-family: 'Red Hat Text';
+}
+
+p {
+    font-family: 'Poppins';
+    text-align: justify;
+    font-size: 16px;
 }
 
 .index-about {
@@ -79,7 +124,7 @@ li.ordered:before {
     background: url(../images/ruby\ 0.jpg);
     background-size: cover; 
     background-position: center;
-    scale: 80%;
+    scale: 60%;
 }
 
 .image-small-right {
@@ -112,7 +157,9 @@ li.ordered:before {
 .column-1 {
     float: left;
     position: relative;
-    bottom: 50px;
+    bottom: 150px;
+    top: -100px;
+    left: 108px;
     width: 35%;
     padding: 40px;
     height: 849px;
@@ -127,12 +174,11 @@ li.ordered:before {
     float: left;
     position: relative;
     top: 50px;
-    width: 55%;
+    width: 48%;
+    right: 30px;
     padding: 40px;
-    padding-left:70px;
-    padding-right: 70px;
+    margin-right: 80px;
     height: auto;
-    margin:30px;
     background-color: #A69FAB;
     line-height:2;
 }
@@ -143,6 +189,7 @@ li.ordered:before {
     top: 90px;
     left: 390px;
     overflow-y: scroll;
+    margin-right: 90px;
     height: calc(100vh - 90px)
 }
 
@@ -152,7 +199,7 @@ li.ordered:before {
     padding: 20px;
     padding-left: 30px;
     height: 100%;
-    width: 80%;
+    width: 90%;
     color: #DDF8DF;
     overflow-y: scroll;
     height: calc(100vh - 90px)
@@ -181,22 +228,23 @@ li.ordered:before {
 }
 
 .footer {
-    position: fixed;
+    position: static;
     top: 0px;
     width: 100%;
-    height: 120px;
-    background-image: linear-gradient(to bottom, #313131FF, #31313100 60%);
+    height: 80px;
+    background-color: #151515;
 }
 
 .footer-text {
+    font-family: 'Staatliches';
     font-size: 25px;
-    padding-left: 40px;
+    padding-left: 200px;
     float: left;
     word-spacing: 20px;
 }
 
 .footer-icons {
-    padding-right: 40px;
+    padding-right: 200px;
     margin-top: 20px;
     float: right;
 }
@@ -205,13 +253,15 @@ li.ordered:before {
     height: 40px;
     margin-left: 20px;
     margin-top: 5px;
-    border: 0px solid #DB162F;
-    border-radius: 50%;
+}
+
+.icons-style {
+    transition: all 0.3s ease-in-out;
 }
 
 .icons-style:hover {
-    background-color:#DB162F;
-} 
+    transform: scale(1.1);
+}
 
 .project-text {
     text-align: center;
